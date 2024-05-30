@@ -1,0 +1,84 @@
+<div class="hero" id="paradiv">
+  <nav id="navbar">
+    <div class="navbar-container">
+      <div class="nav-links">
+        <a routerLink="/projectmanager/createproject">ProjectCreate</a>
+        <a routerLink="/projectmanager/projectslist">ViewProjects</a>
+        <a routerLink="/projectmanager/task">AddTeammemebrs</a>
+        <a routerLink="/projectmanager/tasklist">ViewProjectTask</a>
+        <a routerLink="/admin/alogin">Signout</a>
+      </div>
+      <div class="image-container">
+        <img src="https://i.pinimg.com/736x/cd/8c/65/cd8c65c7813855d5f58cf91801b1d256.jpg" alt="" height="50px" width="45px">
+      </div>
+    </div>
+  </nav>
+
+  <div id="part1">
+    <div class="card">
+      <div class="card-body">
+        <h2>{{ project?.projectName }}</h2>
+        <button (click)="toggleAddTeamMember()">Add Team Members</button>
+        <!-- Team Members Modal -->
+        <div *ngIf="showAddTeamMember" class="modal">
+          <div class="modal-content">
+            <span class="close" (click)="toggleAddTeamMember()">&times;</span>
+            <h3>Select Team Members</h3>
+            <table class="team">
+              <thead>
+                <tr>
+                  <th>Select</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let teamMember of teamMembers">
+                  <td>
+                    <input type="checkbox" (change)="onTeamMemberSelected(teamMember, $event)">
+                  </td>
+                  <td>{{ teamMember.name }}</td>
+                  <td>{{ teamMember.email }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <button (click)="confirmTeamMembers()">Confirm Selection</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTeamMembers.length > 0">
+      <div class="card">
+        <div class="card-body">
+          <h3>Assign Task to Selected Team Members</h3>
+          <table class="task-assign-table">
+            <thead>
+              <tr>
+                <th>Team Member</th>
+                <th>Task Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let teamMember of selectedTeamMembers; let index = index">
+                <td>{{ teamMember.name }}</td>
+                <td>
+                  <input type="text" [(ngModel)]="taskDescriptions[teamMember.id]" placeholder="Enter task description">
+                </td>
+                <td>
+                  <select [(ngModel)]="taskStatuses[teamMember.id]">
+                    <option value="Pending">Pending</option>
+                    <option value="Started">Started</option>
+                    <option value="Finished">Finished</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button (click)="assignTasks()">Assign Tasks</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

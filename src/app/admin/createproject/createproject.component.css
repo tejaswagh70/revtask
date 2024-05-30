@@ -1,0 +1,188 @@
+html {
+    height: 100%;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background: #f0f0f0; /* Light background color */
+
+  }
+  
+  .signup-box {
+    position: relative;
+    margin-left: 30px;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 20px;
+    text-align: center; /* Center aligning the content */
+  }
+  
+  .signup-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: black;
+  }
+  
+  .signup-box .user-box {
+    position: relative;
+  }
+  
+  .signup-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  
+  .signup-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .signup-box .user-box input:focus ~ label,
+  .signup-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .signup-box form {
+    display: inline-block; /* Change form to inline-block */
+  }
+  
+  .signup-box form input[type="submit"] {
+    width: auto; /* Set width to auto */
+    background: whitesmoke;
+    border: none;
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-box form input[type="submit"]:hover {
+    background: #03c7f4;
+  }
+  
+  .signup-box form .back-login {
+    display: inline-block; /* Display the link inline-block */
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px; /* Adjust the top margin */
+    transition: transform 0.5s ease;
+  }
+  .same{
+
+    height: 40px;
+    line-height: 40px;
+    font-size: larger;
+  }
+  
+  .same:hover{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    font-size: large;
+  }
+  
+  
+  #but2{
+  position: relative;
+  margin-top: 30px;
+  }
+  
+  #part1{
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(87, 87, 87, 0.5);
+  }
+  
+  #part2{
+    margin-left: 10px;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(87, 87, 87, 0.5);
+  }
+  
+  #paradiv
+  {
+    height: 97vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  #tm{
+    position: relative;
+    top: 20px;
+  }
+  
+  #img{
+    border-radius: 40px;
+    position: absolute;
+    left: 1380px;
+    top: 33px;
+  }
+  
+  #cont1{
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 40px;
+    width: 950px;
+    position: absolute;
+    top: 30px;
+    left: 400px;
+  }
+  
+  #searching{
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    border-radius: 30px;
+    border: #fff;
+    width: 770px;
+    height: 25px;
+  }
+  
+  
+  #cont2{
+    position: absolute;
+    display: inline-block;
+    height: 80vh;
+    width: 1100px;
+    background-color: #fff;
+    border-radius: 30px;
+    left: 350px;
+    top: 100px;
+  }
+  

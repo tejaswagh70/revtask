@@ -1,0 +1,69 @@
+
+<div class="navbar">
+  
+  <a routerLink="/projectmanager/projectslist">ViewProjects</a>
+  <a routerLink="/projectmanager/task">AddTeammemebrs</a>
+  <a routerLink="/projectmanager/tasklist">ViewProjectTask</a>
+  <a routerLink="/admin/alogin">signout</a>
+</div>
+
+
+  
+<div id="part2">
+  <div>
+      <div>
+        <img src="https://i.pinimg.com/736x/cd/8c/65/cd8c65c7813855d5f58cf91801b1d256.jpg" alt="" height="50px" width="45px">
+      </div>
+  </div>
+  <div>
+    <button></button>
+  </div>
+  <h2>Tasks Assigned</h2>
+  <div id="cont2">
+    <div class="project-list">
+      
+      
+      
+      <div *ngFor="let task of tasklists" class="project-card">
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="2"><b><u>Task {{ task.id }}</u></b></td>
+            </tr>
+            <tr>
+              <td class="heading">Project Id</td>
+              <td class="content">{{ task.project.id }}</td>
+            </tr>
+            <tr>
+              <td class="heading">Project Name</td>
+              <td class="content">{{ task.project. projectName }}</td>
+            </tr>
+            <tr>
+              <td class="heading">Team Member Id</td>
+              <td class="content">{{ task.teamMember.id }}</td>
+            </tr>
+            <tr>
+              <td class="heading">TeamMemebr Name</td>
+              <td class="content">{{ task.teamMember.name }}</td>
+            </tr>
+            <tr>
+              <td class="heading">Task</td>
+              <td class="content">{{ task.description }}</td>
+            </tr>
+            <tr>
+              <td class="heading">Status</td>
+              <td class="content">{{ task.status }}</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="button-container">
+                <button class="delete">Delete</button>
+                <button class="update">Update</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+  </div>
+</div>

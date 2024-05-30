@@ -1,0 +1,51 @@
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  position: relative; /* Add relative positioning */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-container a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 20px; /* Add some gap between the links */
+}
+
+.navbar-container a:hover {
+  color: greenyellow; /* Change color on hover */
+}
+
+/* Image styles */
+.hero-image {
+  position: absolute; /* Position the image absolutely */
+  right: 10px; /* Adjust the distance from the right side */
+  top: 50%; /* Align the image vertically */
+  transform: translateY(-50%); /* Center the image vertically */
+}
+
+.hero-image img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Remove border for hr */
+hr {
+  border: none;
+  border-top: 1px solid #fff;
+}
+
+/* Reset margin and padding for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

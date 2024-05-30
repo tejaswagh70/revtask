@@ -1,0 +1,114 @@
+.navbar {
+  background-color: #000408;
+  display: flex;
+  justify-content: left;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgb(10, 50, 29);
+  color: #39ff14; /* Neon Green */
+}
+
+/* Task List */
+#part2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  width: 300px; /* Set a fixed width for each card */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card table {
+  width: 100%;
+}
+
+.project-card table .heading {
+  font-weight: bold;
+}
+
+.project-card table .content {
+  padding-left: 10px;
+}
+
+/* Button Styling */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.button-container button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button.delete {
+  background-color: #ff6347; /* Tomato */
+  color: white;
+}
+
+.button-container button.update {
+  background-color: #20b2aa; /* Light Sea Green */
+  color: white;
+}
+
+.button-container button:hover {
+  background-color: #0a131a; /* Steel Blue */
+}
+
+.back-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-button a {
+  text-decoration: none;
+  background-color: rgb(59, 14, 14);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+  background-color: #0056b3;
+}

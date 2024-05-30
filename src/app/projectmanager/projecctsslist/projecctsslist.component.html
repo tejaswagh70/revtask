@@ -1,0 +1,63 @@
+<div class="hero" id="paradiv">
+    <div id="part1">
+      <nav id="navbar">
+        <div class="navbar-container">
+          <div class="nav-links">
+            
+            <a routerLink="/projectmanager/projectslist">ViewProjects</a>
+            <a routerLink="/projectmanager/task">AddTeammemebrs</a>
+            <a routerLink="/projectmanager/tasklist">ViewProjectTask</a>
+            <a routerLink="/admin/alogin">signout</a>
+          </div>
+          <div class="image-container">
+            <img src="https://i.pinimg.com/736x/cd/8c/65/cd8c65c7813855d5f58cf91801b1d256.jpg" alt="" height="50px" width="45px">
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div id="part2">
+      <div>
+      </div>
+      <div id="cont2">
+        <h2>Projects List</h2>
+        <div class="project-list">
+          <div *ngFor="let project of projectstable" class="project-card">
+            <table>
+              <tbody>
+                <tr colspan="2">
+                  <td>Title {{project.id}}</td>
+                </tr>
+                <tr>
+                  <td class="heading">ProjectName</td>
+                  <td class="content">{{ project.projectName }}</td>
+                </tr>
+                <tr>
+                  <td class="heading">Description</td>
+                  <td class="content">{{ project.description }}</td>
+                </tr>
+                <tr>
+                  <td class="heading">ClientName</td>
+                  <td class="content">{{ project.clientName }}</td>
+                </tr>
+                <tr>
+                  <td class="heading">StartDate</td>
+                  <td class="content">{{ project.startDate }}</td>
+                </tr>
+                <tr>
+                  <td class="heading">EndDate</td>
+                  <td class="content">{{ project.endDate }}</td>
+                </tr>
+                <tr>
+                  <td class="heading">Status</td>
+                  <td class="content">{{ project.status }}</td>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

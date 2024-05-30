@@ -1,0 +1,32 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="bg-container">     
+  <div class="edit-container">
+    <h2 class="text-center">Edit Team Member</h2>
+    <form (ngSubmit)="saveTeammember()" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="teammember.name" name="name" class="form-control" required>
+        <div class="invalid-feedback">
+          Please provide a name.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="teammember.email" name="email" class="form-control" required>
+        <div class="invalid-feedback">
+          Please provide a valid email.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="teammember.password" name="password" class="form-control" required>
+        <div class="invalid-feedback">
+          Please provide a password.
+        </div>
+      </div>
+      <div class="button-container">
+      <button type="submit" class="button-33">Save</button>
+    </div>
+    </form>
+  </div>
+</div>

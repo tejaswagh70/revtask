@@ -1,0 +1,136 @@
+.same{
+
+    height: 40px;
+    line-height: 40px;
+    font-size: larger;
+  }
+  
+  .same:hover{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    font-size: large;
+  }
+  
+  
+  #but2{
+  position: relative;
+  margin-top: 30px;
+  }
+  
+  #part1{
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(87, 87, 87, 0.5);
+  }
+  
+  #part2{
+    margin-left: 10px;
+    border-radius: 30px;
+    text-align: center;
+    background: rgba(87, 87, 87, 0.5);
+  }
+  
+  #paradiv
+  {
+    height: 97vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  #tm{
+    position: relative;
+    top: 20px;
+  }
+  
+  #img{
+    border-radius: 40px;
+    position: absolute;
+    left: 1380px;
+    top: 33px;
+  }
+  
+  #cont1{
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 40px;
+    width: 950px;
+    position: absolute;
+    top: 30px;
+    left: 400px;
+  }
+  
+  #searching{
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    border-radius: 30px;
+    border: #fff;
+    width: 770px;
+    height: 25px;
+  }
+  
+  
+  #cont2{
+    position: absolute;
+    display: inline-block;
+    height: 80vh;
+    width: 1100px;
+    background-color: #fff;
+    border-radius: 30px;
+    left: 350px;
+    top: 100px;
+  }
+
+
+  
+  table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 3px solid black;
+    background: #fff;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.back-button a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #03c7f4;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #03a7d4;
+}

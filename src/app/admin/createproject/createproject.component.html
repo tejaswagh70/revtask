@@ -1,0 +1,30 @@
+  <app-admin-navbar></app-admin-navbar>
+  <div id="cont2">
+    <div class="content">
+        <div class="signup-box">
+            <h2>CreateProject</h2>
+            <form (ngSubmit)="create()" #signupForm="ngForm">
+                <div class="user-box">
+                    <input type="text" name="title" [(ngModel)]="title" required>
+                    <label>Title</label>
+                </div>
+                <div class="user-box">
+                    <input type="email" name="descritption" [(ngModel)]="description" required>
+                    <label>Descritption</label>
+                </div>
+                <input type="submit" value="Sign Up">
+                </form>
+    
+        </div>
+        </div>      
+  
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

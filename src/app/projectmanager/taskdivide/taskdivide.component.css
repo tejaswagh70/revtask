@@ -1,0 +1,49 @@
+#navbar {
+  background-color: #000408;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Add space between links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #39ff14; /* Change color on hover */
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-container img {
+  height: 50px;
+  width: 45px;
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px; /* Add margin to the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}

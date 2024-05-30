@@ -1,0 +1,34 @@
+  <app-admin-navbar></app-admin-navbar>
+    <div class="content" >
+        <div class="signup-box">
+            <h2>Create Account</h2>
+            <form (ngSubmit)="register()" #signupForm="ngForm">
+                <div class="user-box">
+                    <input type="text" name="name" [(ngModel)]="name" required>
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="email" name="email" [(ngModel)]="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="password" [(ngModel)]="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+                    <label>Confirm Password</label>
+                </div>
+                <button class="button-33" type="submit">Create</button>
+                <br>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!-- <app-createaccount *ngIf="ca"></app-createaccount> -->

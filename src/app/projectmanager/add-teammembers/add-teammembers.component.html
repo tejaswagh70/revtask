@@ -1,0 +1,39 @@
+<div class="hero" id="paradiv">
+  <div id="part1">
+    
+    
+    <nav id="navbar">
+      <div class="navbar-container">
+         
+          <a routerLink="/projectmanager/projectslist">ViewProjects</a>
+          <a routerLink="/projectmanager/task">AddTeammemebrs</a>
+          <a routerLink="/projectmanager/tasklist">ViewProjectTask</a>
+          <a routerLink="/admin/alogin">signout</a>
+      </div>
+      <div> 
+        <img src="https://i.pinimg.com/736x/cd/8c/65/cd8c65c7813855d5f58cf91801b1d256.jpg" alt="" height="50px" width="45px">
+      </div>
+  </nav>
+  </div>
+
+  <div id="part2">
+   
+     
+      
+    <div id="cont2">
+      <h2>Projects List</h2>
+      <div class="project-list">
+        
+        <div class="project-list">
+          <div *ngFor="let project of projects" class="project-card">
+            <button [routerLink]="['/projectmanager/taskdivide', project.id]">
+              <h3>{{ project.projectName }}</h3>
+              <p>{{ project.description }}</p>
+            </button>
+          </div>
+        </div>
+           
+      </div>
+    </div>
+  </div>
+</div>

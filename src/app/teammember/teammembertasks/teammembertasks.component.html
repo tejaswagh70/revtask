@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" routerLink="/teammember/teammembertasks">View Task</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link" routerLink="/admin/alogin">Sign Out</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+<div id="part2">
+  <div id="cont2">
+      <div class="project-list">
+          <h2>Projects List</h2>
+          <div class="project-cards-container">
+              <div *ngFor="let task of tasklists" class="project-card">
+                  <div class="card-header">
+                      Title {{ task.id }}
+                  </div>
+                  <div class="card-body">
+                      <p><span class="heading">Project Id:</span> {{ task.project.id }}</p>
+                      <p><span class="heading">Project Name:</span> {{ task.project.projectName }}</p>
+                      <p><span class="heading">Team Member Id:</span> {{ task.teamMember.id }}</p>
+                      <p><span class="heading">Team Member Name:</span> {{ task.teamMember.name }}</p>
+                      <p><span class="heading">Task:</span> {{ task.description }}</p>
+                      <p><span class="heading">Status:</span> {{ task.status }}</p>
+                      <button class="update-button">Update</button>
+                  </div>
+              </div>
+          </div>
+          <div class="back-button">
+              <a routerLink="/teammember/thome">Back</a>
+          </div>
+      </div>
+  </div>
+</div>

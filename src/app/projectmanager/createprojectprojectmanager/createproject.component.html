@@ -1,0 +1,73 @@
+<div class="hero" id="paradiv">
+    <div id="part1">
+      <nav id="navbar">
+        <div class="navbar-container">
+          <div class="nav-links">
+            <a routerLink="/projectmanager/createproject">ProjectCreate</a>
+            <a routerLink="/projectmanager/projectslist">ViewProjects</a>
+            <a routerLink="/projectmanager/task">AddTeammemebrs</a>
+            <a routerLink="/projectmanager/tasklist">ViewProjectTask</a>
+            <a routerLink="/admin/alogin">Signout</a>
+          </div>
+          <div class="image-container">
+            <img src="https://i.pinimg.com/736x/cd/8c/65/cd8c65c7813855d5f58cf91801b1d256.jpg" alt="Profile Image" height="50px" width="45px">
+          </div>
+        
+        </div>
+
+      </nav>
+    </div>
+  
+    <div id="part2">
+      
+      <div id="cont2">
+        <form (ngSubmit)="addProject()" id="projectForm">
+          <h1>Project Creation</h1>
+          <div class="card">
+            <table id="projectTable">
+              <tr>
+                <td><label for="projectName">Project Name:</label></td>
+                <td><input type="text" id="projectName" [(ngModel)]="projectName" name="projectName" required></td>
+              </tr>
+              <tr>
+                <td><label for="description">Description:</label></td>
+                <td><textarea id="description" [(ngModel)]="description" name="description"></textarea></td>
+              </tr>
+              <tr>
+                <td><label for="clientName">Client Name:</label></td>
+                <td>
+                  <select id="clientName" [(ngModel)]="clientName" name="clientName" required>
+                    <option *ngFor="let client of clientNames" [value]="client">{{ client }}</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="startDate">Start Date:</label></td>
+                <td><input type="date" id="startDate" [(ngModel)]="startDate" name="startDate" required></td>
+              </tr>
+              <tr>
+                <td><label for="endDate">End Date:</label></td>
+                <td><input type="date" id="endDate" [(ngModel)]="endDate" name="endDate" required></td>
+              </tr>
+              <tr>
+                <td><label for="status">Status:</label></td>
+                <td>
+                  <select id="status" [(ngModel)]="status" name="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Started">Started</option>
+                    <option value="Ended">Ended</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button type="submit" id="submitButton">Create</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

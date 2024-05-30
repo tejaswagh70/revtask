@@ -1,0 +1,13 @@
+/* Default nav item color */
+.nav-link {
+    color: white !important;
+  }
+  
+  /* Highlight the active nav item */
+  .nav-item.active .nav-link {
+    color: #22aa4d !important;
+  }
+  .navbar-nav{
+    font-size: 15px;
+    font-weight: bold;
+  }

@@ -1,0 +1,42 @@
+
+<app-admin-navbar></app-admin-navbar>
+<div style="display: flex; justify-content: center; margin-top: 10px;">
+<div id="cont2">
+    <h2>Teammembers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pmanager of teammembers">
+                <td>{{ pmanager.id }}</td>
+                <td>{{ pmanager.name }}</td>
+                <td>{{ pmanager.email }}</td>
+                <td>{{ pmanager.password }}</td>
+                <td>
+                <div class="action-buttons">
+                 <!-- <button (click)="editTeammember(pmanager)" > <a [routerLink]="['/admin/editteam', pmanager.id]"><i class="fa-solid fa-pen-to-square"></i></a></button> -->
+                 <button (click)="editTeammember(pmanager)" ><i class="fa-solid fa-pen-to-square"></i></button>
+                 <button (click)="deleteTeammember(pmanager.id)"><i class="fa-solid fa-trash"></i></button>
+                 </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="back-button">
+        <a routerLink="/admin/ahome" class="button-33">Back</a>
+    </div>
+</div>
+</div>
+
+
+
+        
+  
+
